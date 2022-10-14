@@ -47,11 +47,11 @@
           </label>
 
           <label for="birth" id="birth-label">Date of birth:
-            <input id="birth" name="birth" type="date" min="1930-01-01" max="2005-01-01" required/>
+            <input id="birth" name="birth" type="date" min="1930-01-01" max="2005-01-01" required />
           </label>
 
           <label for="tel" id="tel-label">Telephone:
-            <input id="tel" name="tel" type="tel" placeholder="Enter your telephone" minlength="8" required/>
+            <input id="tel" name="tel" type="tel" placeholder="Enter your telephone" minlength="8" required />
           </label>
         </section>
 
@@ -59,13 +59,27 @@
           <h4>Subscription</h4>
 
           <label for="subscription-plan">Choose your plan:
-            <select id="subscription-plan" name="subscription-plan">
+            <select id="subscription-plan" name="subscription-plan" required>
               <option value="">(select one)</option>
-              <option value="1">free plan</option>
-              <option value="2">paid</option>
-              <option value="4">Other</option>
+              
+              <optgroup label="Free">
+                <option value="free">Free - 0€</option>
+              </optgroup>
+
+              <optgroup label="Premium">
+                <option value="basic">Basic - 12.99€</option>
+                <option value="standard">Standard - 30.99€</option>
+                <option value="plus">Plus - 32.99€</option>
+              </optgroup>
+              
             </select>
           </label>
+
+          <label for="subscription-pro-plan" name="subscription-pro-plan">
+            <input id="subscription-pro-plan" type="checkbox" name="subscription-pro-plan" value="pro" />
+            I am ready for the PRO PLAN!
+          </label>
+
         </section>
 
         <section class="payment">
