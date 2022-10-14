@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="eng">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>HTML Lesson</title>
-    <style>
-      label {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
 
-    <header>
-      <h1 id="title">Registration form</h1>
-      <h2>BeFitter Gym</h2>
-    </header>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>HTML Lesson</title>
+  <style>
+    label {
+      display: block;
+    }
+  </style>
+</head>
 
-    <main>
-      <form id="registration-form">
-        <fieldset>
-          <legend>Please fill out this form with the required information</legend>
+<body>
+
+  <header>
+    <h1 id="title">Registration form</h1>
+    <h2>BeFitter Gym</h2>
+  </header>
+
+  <main>
+    <form id="registration-form">
+
+      <fieldset>
+        <legend>Please fill out this form with the required information</legend>
+        <section class="personal-info">
+          
           <label for="name" id="name-label">Name:
-            <input id="name" name="name" type="text" placeholder="Enter your name" pattern="[A-Za-zΑ-Ωα-ω]{2,20}" required />
+            <input id="name" name="name" type="text" placeholder="Enter your name" pattern="[A-Za-zΑ-Ωα-ω]{2,20}"
+              required />
           </label>
 
-          <label for="lastname" id="lastname-label">Last Name: 
-            <input id="lastname" name="lastname" type="text" placeholder="Enter your last name" pattern="[A-Za-zΑ-Ωα-ω]{2,20}" required />
+          <label for="lastname" id="lastname-label">Last Name:
+            <input id="lastname" name="lastname" type="text" placeholder="Enter your last name"
+              pattern="[A-Za-zΑ-Ωα-ω]{2,20}" required />
           </label>
 
           <label for="email" id="email-label">Email:
@@ -42,20 +46,55 @@
           </label>
 
           <label for="birth" id="birth-label">Date of birth:
-            <input id="birth" name="birth" type="date" min="1930-01-01" max="2005-01-01" />
+            <input id="birth" name="birth" type="date" min="1930-01-01" max="2005-01-01" required/>
           </label>
-          
+
           <label for="tel" id="tel-label">Telephone:
-            <input id="tel" name="tel" type="tel" placeholder="Enter your telephone" minlength="8" />
+            <input id="tel" name="tel" type="tel" placeholder="Enter your telephone" minlength="8" required/>
           </label>
-        </fieldset>
+        </section>
+        
+        <section class="payment">
+          <label for="cc-number" id="cc-number">Credit card number:
+            <input id="cc-number" name="cc-number" type="tel" inputmode="numeric" placeholder="Card Number" pattern="[0-9\s]{13,19}" maxlength="19" required />
+          </label>
 
-        <label for="submit-button" id="submit-button">
-          <input id="submit" name="submit-button" type="submit" value="Submit" />
-        </label>
+          <label for="cvc-number" id="cvc-number">CVC:
+            <input id="cvc-number" name="cvc-number" type="tel" inputmode="numeric" placeholder="CVC" pattern="[0-9\s]{3,4}" maxlength="4" required />
+          </label>
 
-      </form>
-    </main>
+          <label for="exp-date" id="exp-date">Expiration date:
+            <input id="exp-date" name="exp-date" type="month" min="2022-10" max="2030-10" required />
+          </label>
+        </section>
 
-  </body>
+        <section class="billing">
+          <label for="billing-address" id="billing-address">Address:
+            <input id="billing-address" name="billing-address" type="text" placeholder="Enter your address" minlength="2" maxlength="25" required/>
+          </label>
+
+          <label for="billing-city" id="billing-city">City:
+            <input id="billing-city" name="billing-city" type="text" placeholder="Enter your city" minlength="2" maxlength="20" required/>
+          </label>
+
+          <label for="billing-country" id="billing-country">Country:
+            <input id="billing-country" name="billing-country" type="text" placeholder="Enter your country" minlength="2" maxlength="20" required/>
+          </label>
+
+          <label for="billing-zip" id="billing-zip">Zip code:
+            <input id="billing-zip" name="billing-zip" type="text" placeholder="Enter your zip code" minlength="2" maxlength="10" required/>
+          </label>
+        </section>
+
+      </fieldset>
+
+      <label for="submit-button" id="submit-button">
+        <input id="submit" name="submit-button" type="submit" value="Submit" />
+      </label>
+
+    </form>
+  </main>
+
+</body>
+
 </html>
