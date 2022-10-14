@@ -26,7 +26,8 @@
       <fieldset>
         <legend>Please fill out this form with the required information</legend>
         <section class="personal-info">
-          
+          <h4>Personal information</h4>
+
           <label for="name" id="name-label">Name:
             <input id="name" name="name" type="text" placeholder="Enter your name" pattern="[A-Za-zΑ-Ωα-ω]{2,20}"
               required />
@@ -55,6 +56,8 @@
         </section>
         
         <section class="payment">
+          <h4>Payment</h4>
+
           <label for="cc-number" id="cc-number">Credit card number:
             <input id="cc-number" name="cc-number" type="tel" inputmode="numeric" placeholder="Card Number" pattern="[0-9\s]{13,19}" maxlength="19" required />
           </label>
@@ -69,6 +72,8 @@
         </section>
 
         <section class="billing">
+          <h4>Billing information</h4>
+
           <label for="billing-address" id="billing-address">Address:
             <input id="billing-address" name="billing-address" type="text" placeholder="Enter your address" minlength="2" maxlength="25" required/>
           </label>
